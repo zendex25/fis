@@ -1,0 +1,99 @@
+<h1>Listing faculties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Last name</th>
+      <th>First name</th>
+      <th>Middle name</th>
+      <th>Present address</th>
+      <th>Present address tel</th>
+      <th>Perma address</th>
+      <th>Perma address tel</th>
+      <th>Nationality</th>
+      <th>Citizen</th>
+      <th>Birth place</th>
+      <th>Birth date</th>
+      <th>Civil status</th>
+      <th>Sex</th>
+      <th>Spouse</th>
+      <th>Marriage date</th>
+      <th>Occupation</th>
+      <th>Position</th>
+      <th>Employer</th>
+      <th>Employer tel</th>
+      <th>No of child</th>
+      <th>No of child studying</th>
+      <th>No of child working</th>
+      <th>Father name</th>
+      <th>Father age</th>
+      <th>Mother name</th>
+      <th>Mother age</th>
+      <th>Tin</th>
+      <th>Sss</th>
+      <th>Gsis</th>
+      <th>Philhealth</th>
+      <th>Pro license</th>
+      <th>Resid cert</th>
+      <th>Issued at</th>
+      <th>Issued on</th>
+      <th>Pro license expire</th>
+      <th>Academic rank</th>
+      <th>Faculty status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faculties.each do |faculty| %>
+      <tr>
+        <td><%= faculty.last_name %></td>
+        <td><%= faculty.first_name %></td>
+        <td><%= faculty.middle_name %></td>
+        <td><%= faculty.present_address %></td>
+        <td><%= faculty.present_address_tel %></td>
+        <td><%= faculty.perma_address %></td>
+        <td><%= faculty.perma_address_tel %></td>
+        <td><%= faculty.nationality %></td>
+        <td><%= faculty.citizen %></td>
+        <td><%= faculty.birth_place %></td>
+        <td><%= faculty.birth_date %></td>
+        <td><%= faculty.civil_status %></td>
+        <td><%= faculty.sex %></td>
+        <td><%= faculty.spouse %></td>
+        <td><%= faculty.marriage_date %></td>
+        <td><%= faculty.occupation %></td>
+        <td><%= faculty.position %></td>
+        <td><%= faculty.employer %></td>
+        <td><%= faculty.employer_tel %></td>
+        <td><%= faculty.no_of_child %></td>
+        <td><%= faculty.no_of_child_studying %></td>
+        <td><%= faculty.no_of_child_working %></td>
+        <td><%= faculty.father_name %></td>
+        <td><%= faculty.father_age %></td>
+        <td><%= faculty.mother_name %></td>
+        <td><%= faculty.mother_age %></td>
+        <td><%= faculty.tin %></td>
+        <td><%= faculty.sss %></td>
+        <td><%= faculty.gsis %></td>
+        <td><%= faculty.philhealth %></td>
+        <td><%= faculty.pro_license %></td>
+        <td><%= faculty.resid_cert %></td>
+        <td><%= faculty.issued_at %></td>
+        <td><%= faculty.issued_on %></td>
+        <td><%= faculty.pro_license_expire %></td>
+        <td><%= faculty.academic_rank %></td>
+        <td><%= faculty.faculty_status %></td>
+        <td><%= link_to 'Show', faculty %></td>
+        <td><%= link_to 'Edit', edit_faculty_path(faculty) %></td>
+        <td><%= link_to 'Destroy', faculty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Faculty', new_faculty_path %>

@@ -1,0 +1,79 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  last_name: MyString
+  first_name: MyString
+  middle_name: MyString
+  present_address: MyString
+  present_address_tel: MyString
+  perma_address: MyString
+  perma_address_tel: MyString
+  nationality: MyString
+  citizen: MyString
+  birth_place: MyString
+  birth_date: 2014-02-08 18:34:48
+  civil_status: MyString
+  sex: MyString
+  spouse: MyString
+  marriage_date: 2014-02-08 18:34:48
+  occupation: MyString
+  position: MyString
+  employer: MyString
+  employer_tel: MyString
+  no_of_child: 1
+  no_of_child_studying: 1
+  no_of_child_working: 1
+  father_name: MyString
+  father_age: 1
+  mother_name: MyString
+  mother_age: 1
+  tin: MyString
+  sss: MyString
+  gsis: MyString
+  philhealth: MyString
+  pro_license: MyString
+  resid_cert: MyString
+  issued_at: MyString
+  issued_on: 2014-02-08 18:34:48
+  pro_license_expire: 2014-02-08 18:34:48
+  academic_rank: MyString
+  faculty_status: MyString
+
+two:
+  last_name: MyString
+  first_name: MyString
+  middle_name: MyString
+  present_address: MyString
+  present_address_tel: MyString
+  perma_address: MyString
+  perma_address_tel: MyString
+  nationality: MyString
+  citizen: MyString
+  birth_place: MyString
+  birth_date: 2014-02-08 18:34:48
+  civil_status: MyString
+  sex: MyString
+  spouse: MyString
+  marriage_date: 2014-02-08 18:34:48
+  occupation: MyString
+  position: MyString
+  employer: MyString
+  employer_tel: MyString
+  no_of_child: 1
+  no_of_child_studying: 1
+  no_of_child_working: 1
+  father_name: MyString
+  father_age: 1
+  mother_name: MyString
+  mother_age: 1
+  tin: MyString
+  sss: MyString
+  gsis: MyString
+  philhealth: MyString
+  pro_license: MyString
+  resid_cert: MyString
+  issued_at: MyString
+  issued_on: 2014-02-08 18:34:48
+  pro_license_expire: 2014-02-08 18:34:48
+  academic_rank: MyString
+  faculty_status: MyString
