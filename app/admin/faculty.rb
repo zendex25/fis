@@ -1,5 +1,23 @@
 ActiveAdmin.register Faculty do
 
+  index do
+    column :id
+    column :last_name
+    column :first_name
+    column :position
+    column :employer
+    column :academic_rank
+    column :faculty_status
+    default_actions
+  end
+
+  filter :last_name
+  filter :first_name
+  filter :position
+  filter :employer
+  filter :academic_rank
+  filter :faculty_status
+
   form do |f|
 
     f.inputs "Faculty" do
@@ -51,7 +69,7 @@ f.inputs "Faculty" do
       f.input  :faculty_status
     end 
 
-
+    f.actions
   end
   
   # See permitted parameters documentation:
@@ -66,5 +84,7 @@ f.inputs "Faculty" do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+
+  permit_params :last_name,  :first_name,  :middle_name,  :present_address,  :present_address_tel,  :perma_address,  :perma_address_tel,  :nationality,  :citizen,  :birth_place,  :birth_date,  :civil_status,  :sex,  :spouse,  :marriage_date,  :occupation,  :position,  :employer,  :employer_tel,  :no_of_child,  :no_of_child_studying,  :no_of_child_working,  :father_name,  :father_age,  :mother_name,  :mother_age,  :tin,  :sss,  :gsis,  :philhealth,  :pro_license,  :resid_cert,  :issued_at,  :issued_on,  :pro_license_expire,  :academic_rank,  :faculty_status,
+    children_attributes: [:name, :sex, :age, :_destroy]  
 end
