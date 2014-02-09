@@ -64,7 +64,7 @@ ActiveAdmin.setup do |config|
   # ensure that there is a user with proper rights. You can use
   # CanCanAdapter or make your own. Please refer to documentation.
   # config.authorization_adapter = ActiveAdmin::CanCanAdapter
-  config.authorization_adapter = "OnlyAuthorsAuthorization"
+  
 
   # You can customize your CanCan Ability class name here.
   # config.cancan_ability_class = "Ability"
