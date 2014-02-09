@@ -1,4 +1,6 @@
 Fis::Application.routes.draw do
+  resources :educational_attainments
+
   resources :children
 
   resources :faculties

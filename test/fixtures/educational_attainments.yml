@@ -1,0 +1,87 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  faculty_id: 
+  school_name_elemetary: MyString
+  school_location_elementary: MyString
+  school_yearfrom_elementary: 2014-02-10 01:31:08
+  school_yearto_elementary: 2014-02-10 01:31:08
+  school_degrees_elementary: MyString
+  school_honors_elementary: MyString
+  school_name_intermediate: MyString
+  school_location_intermediate: MyString
+  school_yearfrom_intermediate: 2014-02-10 01:31:08
+  school_yearto_intermediate: 2014-02-10 01:31:08
+  school_degrees_intermediate: MyString
+  school_honors_intermediate: MyString
+  school_name_secondary: MyString
+  school_location_secondary: MyString
+  school_yearfrom_secondary: 2014-02-10 01:31:08
+  school_yearto_secondary: 2014-02-10 01:31:08
+  school_degrees_secondary: MyString
+  school_honors_secondary: MyString
+  school_name_collegiate: MyString
+  school_location_collegiate: MyString
+  school_yearfrom_collegiate: 2014-02-10 01:31:08
+  school_yearto_collegiate: 2014-02-10 01:31:08
+  school_degrees_collegiate: MyString
+  school_honors_collegiate: MyString
+  school_name_graduate: MyString
+  school_location_graduate: MyString
+  school_yearfrom_graduate: 2014-02-10 01:31:08
+  school_yearto_graduate: 2014-02-10 01:31:08
+  school_degrees_graduate: MyString
+  school_honors_graduate: MyString
+  school_name_doctoral: MyString
+  school_location_doctoral: MyString
+  school_yearfrom_doctoral: 2014-02-10 01:31:08
+  school_yearto_doctoral: 2014-02-10 01:31:08
+  school_degrees_doctoral: MyString
+  school_honors_doctoral: MyString
+  college_major: MyString
+  college_minor: MyString
+  special_studies: MyString
+  present_studies: MyString
+
+two:
+  faculty_id: 
+  school_name_elemetary: MyString
+  school_location_elementary: MyString
+  school_yearfrom_elementary: 2014-02-10 01:31:08
+  school_yearto_elementary: 2014-02-10 01:31:08
+  school_degrees_elementary: MyString
+  school_honors_elementary: MyString
+  school_name_intermediate: MyString
+  school_location_intermediate: MyString
+  school_yearfrom_intermediate: 2014-02-10 01:31:08
+  school_yearto_intermediate: 2014-02-10 01:31:08
+  school_degrees_intermediate: MyString
+  school_honors_intermediate: MyString
+  school_name_secondary: MyString
+  school_location_secondary: MyString
+  school_yearfrom_secondary: 2014-02-10 01:31:08
+  school_yearto_secondary: 2014-02-10 01:31:08
+  school_degrees_secondary: MyString
+  school_honors_secondary: MyString
+  school_name_collegiate: MyString
+  school_location_collegiate: MyString
+  school_yearfrom_collegiate: 2014-02-10 01:31:08
+  school_yearto_collegiate: 2014-02-10 01:31:08
+  school_degrees_collegiate: MyString
+  school_honors_collegiate: MyString
+  school_name_graduate: MyString
+  school_location_graduate: MyString
+  school_yearfrom_graduate: 2014-02-10 01:31:08
+  school_yearto_graduate: 2014-02-10 01:31:08
+  school_degrees_graduate: MyString
+  school_honors_graduate: MyString
+  school_name_doctoral: MyString
+  school_location_doctoral: MyString
+  school_yearfrom_doctoral: 2014-02-10 01:31:08
+  school_yearto_doctoral: 2014-02-10 01:31:08
+  school_degrees_doctoral: MyString
+  school_honors_doctoral: MyString
+  college_major: MyString
+  college_minor: MyString
+  special_studies: MyString
+  present_studies: MyString

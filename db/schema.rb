@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208104509) do
+ActiveRecord::Schema.define(version: 20140209173108) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -56,6 +56,54 @@ ActiveRecord::Schema.define(version: 20140208104509) do
   end
 
   add_index "children", ["faculty_id"], name: "index_children_on_faculty_id"
+
+  create_table "educational_attainments", force: true do |t|
+    t.integer  "faculty_id"
+    t.string   "school_name_elemetary"
+    t.string   "school_location_elementary"
+    t.datetime "school_yearfrom_elementary"
+    t.datetime "school_yearto_elementary"
+    t.string   "school_degrees_elementary"
+    t.string   "school_honors_elementary"
+    t.string   "school_name_intermediate"
+    t.string   "school_location_intermediate"
+    t.datetime "school_yearfrom_intermediate"
+    t.datetime "school_yearto_intermediate"
+    t.string   "school_degrees_intermediate"
+    t.string   "school_honors_intermediate"
+    t.string   "school_name_secondary"
+    t.string   "school_location_secondary"
+    t.datetime "school_yearfrom_secondary"
+    t.datetime "school_yearto_secondary"
+    t.string   "school_degrees_secondary"
+    t.string   "school_honors_secondary"
+    t.string   "school_name_collegiate"
+    t.string   "school_location_collegiate"
+    t.datetime "school_yearfrom_collegiate"
+    t.datetime "school_yearto_collegiate"
+    t.string   "school_degrees_collegiate"
+    t.string   "school_honors_collegiate"
+    t.string   "school_name_graduate"
+    t.string   "school_location_graduate"
+    t.datetime "school_yearfrom_graduate"
+    t.datetime "school_yearto_graduate"
+    t.string   "school_degrees_graduate"
+    t.string   "school_honors_graduate"
+    t.string   "school_name_doctoral"
+    t.string   "school_location_doctoral"
+    t.datetime "school_yearfrom_doctoral"
+    t.datetime "school_yearto_doctoral"
+    t.string   "school_degrees_doctoral"
+    t.string   "school_honors_doctoral"
+    t.string   "college_major"
+    t.string   "college_minor"
+    t.string   "special_studies"
+    t.string   "present_studies"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "educational_attainments", ["faculty_id"], name: "index_educational_attainments_on_faculty_id"
 
   create_table "faculties", force: true do |t|
     t.string   "last_name"

@@ -1,0 +1,107 @@
+<h1>Listing educational_attainments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>School name elemetary</th>
+      <th>School location elementary</th>
+      <th>School yearfrom elementary</th>
+      <th>School yearto elementary</th>
+      <th>School degrees elementary</th>
+      <th>School honors elementary</th>
+      <th>School name intermediate</th>
+      <th>School location intermediate</th>
+      <th>School yearfrom intermediate</th>
+      <th>School yearto intermediate</th>
+      <th>School degrees intermediate</th>
+      <th>School honors intermediate</th>
+      <th>School name secondary</th>
+      <th>School location secondary</th>
+      <th>School yearfrom secondary</th>
+      <th>School yearto secondary</th>
+      <th>School degrees secondary</th>
+      <th>School honors secondary</th>
+      <th>School name collegiate</th>
+      <th>School location collegiate</th>
+      <th>School yearfrom collegiate</th>
+      <th>School yearto collegiate</th>
+      <th>School degrees collegiate</th>
+      <th>School honors collegiate</th>
+      <th>School name graduate</th>
+      <th>School location graduate</th>
+      <th>School yearfrom graduate</th>
+      <th>School yearto graduate</th>
+      <th>School degrees graduate</th>
+      <th>School honors graduate</th>
+      <th>School name doctoral</th>
+      <th>School location doctoral</th>
+      <th>School yearfrom doctoral</th>
+      <th>School yearto doctoral</th>
+      <th>School degrees doctoral</th>
+      <th>School honors doctoral</th>
+      <th>College major</th>
+      <th>College minor</th>
+      <th>Special studies</th>
+      <th>Present studies</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @educational_attainments.each do |educational_attainment| %>
+      <tr>
+        <td><%= educational_attainment.faculty %></td>
+        <td><%= educational_attainment.school_name_elemetary %></td>
+        <td><%= educational_attainment.school_location_elementary %></td>
+        <td><%= educational_attainment.school_yearfrom_elementary %></td>
+        <td><%= educational_attainment.school_yearto_elementary %></td>
+        <td><%= educational_attainment.school_degrees_elementary %></td>
+        <td><%= educational_attainment.school_honors_elementary %></td>
+        <td><%= educational_attainment.school_name_intermediate %></td>
+        <td><%= educational_attainment.school_location_intermediate %></td>
+        <td><%= educational_attainment.school_yearfrom_intermediate %></td>
+        <td><%= educational_attainment.school_yearto_intermediate %></td>
+        <td><%= educational_attainment.school_degrees_intermediate %></td>
+        <td><%= educational_attainment.school_honors_intermediate %></td>
+        <td><%= educational_attainment.school_name_secondary %></td>
+        <td><%= educational_attainment.school_location_secondary %></td>
+        <td><%= educational_attainment.school_yearfrom_secondary %></td>
+        <td><%= educational_attainment.school_yearto_secondary %></td>
+        <td><%= educational_attainment.school_degrees_secondary %></td>
+        <td><%= educational_attainment.school_honors_secondary %></td>
+        <td><%= educational_attainment.school_name_collegiate %></td>
+        <td><%= educational_attainment.school_location_collegiate %></td>
+        <td><%= educational_attainment.school_yearfrom_collegiate %></td>
+        <td><%= educational_attainment.school_yearto_collegiate %></td>
+        <td><%= educational_attainment.school_degrees_collegiate %></td>
+        <td><%= educational_attainment.school_honors_collegiate %></td>
+        <td><%= educational_attainment.school_name_graduate %></td>
+        <td><%= educational_attainment.school_location_graduate %></td>
+        <td><%= educational_attainment.school_yearfrom_graduate %></td>
+        <td><%= educational_attainment.school_yearto_graduate %></td>
+        <td><%= educational_attainment.school_degrees_graduate %></td>
+        <td><%= educational_attainment.school_honors_graduate %></td>
+        <td><%= educational_attainment.school_name_doctoral %></td>
+        <td><%= educational_attainment.school_location_doctoral %></td>
+        <td><%= educational_attainment.school_yearfrom_doctoral %></td>
+        <td><%= educational_attainment.school_yearto_doctoral %></td>
+        <td><%= educational_attainment.school_degrees_doctoral %></td>
+        <td><%= educational_attainment.school_honors_doctoral %></td>
+        <td><%= educational_attainment.college_major %></td>
+        <td><%= educational_attainment.college_minor %></td>
+        <td><%= educational_attainment.special_studies %></td>
+        <td><%= educational_attainment.present_studies %></td>
+        <td><%= link_to 'Show', educational_attainment %></td>
+        <td><%= link_to 'Edit', edit_educational_attainment_path(educational_attainment) %></td>
+        <td><%= link_to 'Destroy', educational_attainment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Educational attainment', new_educational_attainment_path %>

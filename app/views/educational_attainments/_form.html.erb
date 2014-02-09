@@ -1,0 +1,181 @@
+<%= form_for(@educational_attainment) do |f| %>
+  <% if @educational_attainment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@educational_attainment.errors.count, "error") %> prohibited this educational_attainment from being saved:</h2>
+
+      <ul>
+      <% @educational_attainment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :faculty_id %><br>
+    <%= f.text_field :faculty_id %>
+  </div>
+  <div class="field">
+    <%= f.label :school_name_elemetary %><br>
+    <%= f.text_field :school_name_elemetary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_location_elementary %><br>
+    <%= f.text_field :school_location_elementary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearfrom_elementary %><br>
+    <%= f.datetime_select :school_yearfrom_elementary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearto_elementary %><br>
+    <%= f.datetime_select :school_yearto_elementary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_degrees_elementary %><br>
+    <%= f.text_field :school_degrees_elementary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_honors_elementary %><br>
+    <%= f.text_field :school_honors_elementary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_name_intermediate %><br>
+    <%= f.text_field :school_name_intermediate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_location_intermediate %><br>
+    <%= f.text_field :school_location_intermediate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearfrom_intermediate %><br>
+    <%= f.datetime_select :school_yearfrom_intermediate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearto_intermediate %><br>
+    <%= f.datetime_select :school_yearto_intermediate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_degrees_intermediate %><br>
+    <%= f.text_field :school_degrees_intermediate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_honors_intermediate %><br>
+    <%= f.text_field :school_honors_intermediate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_name_secondary %><br>
+    <%= f.text_field :school_name_secondary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_location_secondary %><br>
+    <%= f.text_field :school_location_secondary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearfrom_secondary %><br>
+    <%= f.datetime_select :school_yearfrom_secondary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearto_secondary %><br>
+    <%= f.datetime_select :school_yearto_secondary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_degrees_secondary %><br>
+    <%= f.text_field :school_degrees_secondary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_honors_secondary %><br>
+    <%= f.text_field :school_honors_secondary %>
+  </div>
+  <div class="field">
+    <%= f.label :school_name_collegiate %><br>
+    <%= f.text_field :school_name_collegiate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_location_collegiate %><br>
+    <%= f.text_field :school_location_collegiate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearfrom_collegiate %><br>
+    <%= f.datetime_select :school_yearfrom_collegiate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearto_collegiate %><br>
+    <%= f.datetime_select :school_yearto_collegiate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_degrees_collegiate %><br>
+    <%= f.text_field :school_degrees_collegiate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_honors_collegiate %><br>
+    <%= f.text_field :school_honors_collegiate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_name_graduate %><br>
+    <%= f.text_field :school_name_graduate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_location_graduate %><br>
+    <%= f.text_field :school_location_graduate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearfrom_graduate %><br>
+    <%= f.datetime_select :school_yearfrom_graduate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearto_graduate %><br>
+    <%= f.datetime_select :school_yearto_graduate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_degrees_graduate %><br>
+    <%= f.text_field :school_degrees_graduate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_honors_graduate %><br>
+    <%= f.text_field :school_honors_graduate %>
+  </div>
+  <div class="field">
+    <%= f.label :school_name_doctoral %><br>
+    <%= f.text_field :school_name_doctoral %>
+  </div>
+  <div class="field">
+    <%= f.label :school_location_doctoral %><br>
+    <%= f.text_field :school_location_doctoral %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearfrom_doctoral %><br>
+    <%= f.datetime_select :school_yearfrom_doctoral %>
+  </div>
+  <div class="field">
+    <%= f.label :school_yearto_doctoral %><br>
+    <%= f.datetime_select :school_yearto_doctoral %>
+  </div>
+  <div class="field">
+    <%= f.label :school_degrees_doctoral %><br>
+    <%= f.text_field :school_degrees_doctoral %>
+  </div>
+  <div class="field">
+    <%= f.label :school_honors_doctoral %><br>
+    <%= f.text_field :school_honors_doctoral %>
+  </div>
+  <div class="field">
+    <%= f.label :college_major %><br>
+    <%= f.text_field :college_major %>
+  </div>
+  <div class="field">
+    <%= f.label :college_minor %><br>
+    <%= f.text_field :college_minor %>
+  </div>
+  <div class="field">
+    <%= f.label :special_studies %><br>
+    <%= f.text_field :special_studies %>
+  </div>
+  <div class="field">
+    <%= f.label :present_studies %><br>
+    <%= f.text_field :present_studies %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
