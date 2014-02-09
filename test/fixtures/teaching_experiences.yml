@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  faculty_id: 
+  tot_sems_sbc: 1
+  tot_sems_other: 1
+  exp_other: MyString
+  position: MyString
+  institution: MyString
+  salary: 1
+  date_employed_from: 2014-02-10 02:35:49
+  date_employed_to: 2014-02-10 02:35:49
+  leave_reason: MyString
+
+two:
+  faculty_id: 
+  tot_sems_sbc: 1
+  tot_sems_other: 1
+  exp_other: MyString
+  position: MyString
+  institution: MyString
+  salary: 1
+  date_employed_from: 2014-02-10 02:35:49
+  date_employed_to: 2014-02-10 02:35:49
+  leave_reason: MyString

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  faculty_id: 
+  organ_name: MyString
+  material_type: MyString
+  publication_date: 2014-02-10 02:38:28
+  authorship_type: MyString
+  co_author: MyString
+
+two:
+  faculty_id: 
+  organ_name: MyString
+  material_type: MyString
+  publication_date: 2014-02-10 02:38:28
+  authorship_type: MyString
+  co_author: MyString

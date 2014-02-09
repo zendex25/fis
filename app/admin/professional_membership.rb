@@ -1,4 +1,4 @@
-ActiveAdmin.register Child do
+ActiveAdmin.register ProfessionalMembership do
 
   
   # See permitted parameters documentation:

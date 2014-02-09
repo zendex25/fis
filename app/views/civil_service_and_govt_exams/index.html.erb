@@ -1,0 +1,33 @@
+<h1>Listing civil_service_and_govt_exams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>Exam type</th>
+      <th>Date taken</th>
+      <th>Rating</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @civil_service_and_govt_exams.each do |civil_service_and_govt_exam| %>
+      <tr>
+        <td><%= civil_service_and_govt_exam.faculty %></td>
+        <td><%= civil_service_and_govt_exam.exam_type %></td>
+        <td><%= civil_service_and_govt_exam.date_taken %></td>
+        <td><%= civil_service_and_govt_exam.rating %></td>
+        <td><%= link_to 'Show', civil_service_and_govt_exam %></td>
+        <td><%= link_to 'Edit', edit_civil_service_and_govt_exam_path(civil_service_and_govt_exam) %></td>
+        <td><%= link_to 'Destroy', civil_service_and_govt_exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Civil service and govt exam', new_civil_service_and_govt_exam_path %>

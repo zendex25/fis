@@ -1,0 +1,37 @@
+<h1>Listing load_assign_in_others</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>Institution</th>
+      <th>Load assign subject</th>
+      <th>Load assign unit</th>
+      <th>Load assign day</th>
+      <th>Load assign time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @load_assign_in_others.each do |load_assign_in_other| %>
+      <tr>
+        <td><%= load_assign_in_other.faculty %></td>
+        <td><%= load_assign_in_other.institution %></td>
+        <td><%= load_assign_in_other.load_assign_subject %></td>
+        <td><%= load_assign_in_other.load_assign_unit %></td>
+        <td><%= load_assign_in_other.load_assign_day %></td>
+        <td><%= load_assign_in_other.load_assign_time %></td>
+        <td><%= link_to 'Show', load_assign_in_other %></td>
+        <td><%= link_to 'Edit', edit_load_assign_in_other_path(load_assign_in_other) %></td>
+        <td><%= link_to 'Destroy', load_assign_in_other, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Load assign in other', new_load_assign_in_other_path %>

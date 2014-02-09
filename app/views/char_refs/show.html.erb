@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @char_ref.faculty %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @char_ref.name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @char_ref.designation %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @char_ref.address %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @char_ref.tel %>
+</p>
+
+<%= link_to 'Edit', edit_char_ref_path(@char_ref) %> |
+<%= link_to 'Back', char_refs_path %>

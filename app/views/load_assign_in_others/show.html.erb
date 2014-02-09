@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @load_assign_in_other.faculty %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @load_assign_in_other.institution %>
+</p>
+
+<p>
+  <strong>Load assign subject:</strong>
+  <%= @load_assign_in_other.load_assign_subject %>
+</p>
+
+<p>
+  <strong>Load assign unit:</strong>
+  <%= @load_assign_in_other.load_assign_unit %>
+</p>
+
+<p>
+  <strong>Load assign day:</strong>
+  <%= @load_assign_in_other.load_assign_day %>
+</p>
+
+<p>
+  <strong>Load assign time:</strong>
+  <%= @load_assign_in_other.load_assign_time %>
+</p>
+
+<%= link_to 'Edit', edit_load_assign_in_other_path(@load_assign_in_other) %> |
+<%= link_to 'Back', load_assign_in_others_path %>

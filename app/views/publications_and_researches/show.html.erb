@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @publications_and_research.faculty %>
+</p>
+
+<p>
+  <strong>Organ name:</strong>
+  <%= @publications_and_research.organ_name %>
+</p>
+
+<p>
+  <strong>Material type:</strong>
+  <%= @publications_and_research.material_type %>
+</p>
+
+<p>
+  <strong>Publication date:</strong>
+  <%= @publications_and_research.publication_date %>
+</p>
+
+<p>
+  <strong>Authorship type:</strong>
+  <%= @publications_and_research.authorship_type %>
+</p>
+
+<p>
+  <strong>Co author:</strong>
+  <%= @publications_and_research.co_author %>
+</p>
+
+<%= link_to 'Edit', edit_publications_and_research_path(@publications_and_research) %> |
+<%= link_to 'Back', publications_and_researches_path %>

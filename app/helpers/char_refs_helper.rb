@@ -1,0 +1,2 @@
+module CharRefsHelper
+end

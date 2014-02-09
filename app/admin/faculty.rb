@@ -43,15 +43,18 @@ ActiveAdmin.register Faculty do
       f.input  :no_of_child
       f.input  :no_of_child_studying
       f.input  :no_of_child_working
-      end 
+      
 
       f.has_many :children do |g|
         g.input :name
         g.input :sex
         g.input :age
+        g.input :_destroy, :as => :boolean
+        
       end
 
-f.inputs "Faculty" do
+
+
       f.input  :father_name
       f.input  :father_age
       f.input  :mother_name

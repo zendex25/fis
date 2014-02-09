@@ -1,4 +1,18 @@
 Fis::Application.routes.draw do
+  resources :char_refs
+
+  resources :load_assign_in_others
+
+  resources :publications_and_researches
+
+  resources :professional_memberships
+
+  resources :non_teaching_experiences
+
+  resources :teaching_experiences
+
+  resources :civil_service_and_govt_exams
+
   resources :educational_attainments
 
   resources :children

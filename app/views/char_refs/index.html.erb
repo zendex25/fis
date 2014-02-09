@@ -1,0 +1,35 @@
+<h1>Listing char_refs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Address</th>
+      <th>Tel</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @char_refs.each do |char_ref| %>
+      <tr>
+        <td><%= char_ref.faculty %></td>
+        <td><%= char_ref.name %></td>
+        <td><%= char_ref.designation %></td>
+        <td><%= char_ref.address %></td>
+        <td><%= char_ref.tel %></td>
+        <td><%= link_to 'Show', char_ref %></td>
+        <td><%= link_to 'Edit', edit_char_ref_path(char_ref) %></td>
+        <td><%= link_to 'Destroy', char_ref, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Char ref', new_char_ref_path %>

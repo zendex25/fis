@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @non_teaching_experience.faculty %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @non_teaching_experience.position %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @non_teaching_experience.institution %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @non_teaching_experience.salary %>
+</p>
+
+<p>
+  <strong>Date employed from:</strong>
+  <%= @non_teaching_experience.date_employed_from %>
+</p>
+
+<p>
+  <strong>Date employed to:</strong>
+  <%= @non_teaching_experience.date_employed_to %>
+</p>
+
+<p>
+  <strong>Leave reason:</strong>
+  <%= @non_teaching_experience.leave_reason %>
+</p>
+
+<%= link_to 'Edit', edit_non_teaching_experience_path(@non_teaching_experience) %> |
+<%= link_to 'Back', non_teaching_experiences_path %>

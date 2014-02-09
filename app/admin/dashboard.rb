@@ -10,6 +10,20 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+    section "Recent Faculties" do
+        table_for Faculty.order("updated_at desc").limit(5) do
+            column :id do |faculty|
+                link_to faculty.id, admin_faculty_path(faculty)
+            end
+            column :last_name do |faculty|
+                link_to faculty.last_name, admin_faculty_path(faculty)
+            end
+            column :first_name
+            column :updated_at
+        end
+        strong { link_to "View all", admin_faculties_path }
+    end
+
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do

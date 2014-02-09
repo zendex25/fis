@@ -1,0 +1,37 @@
+<h1>Listing publications_and_researches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>Organ name</th>
+      <th>Material type</th>
+      <th>Publication date</th>
+      <th>Authorship type</th>
+      <th>Co author</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications_and_researches.each do |publications_and_research| %>
+      <tr>
+        <td><%= publications_and_research.faculty %></td>
+        <td><%= publications_and_research.organ_name %></td>
+        <td><%= publications_and_research.material_type %></td>
+        <td><%= publications_and_research.publication_date %></td>
+        <td><%= publications_and_research.authorship_type %></td>
+        <td><%= publications_and_research.co_author %></td>
+        <td><%= link_to 'Show', publications_and_research %></td>
+        <td><%= link_to 'Edit', edit_publications_and_research_path(publications_and_research) %></td>
+        <td><%= link_to 'Destroy', publications_and_research, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Publications and research', new_publications_and_research_path %>

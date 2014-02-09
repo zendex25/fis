@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @professional_membership.faculty %>
+</p>
+
+<p>
+  <strong>Org name:</strong>
+  <%= @professional_membership.org_name %>
+</p>
+
+<p>
+  <strong>Membership date:</strong>
+  <%= @professional_membership.membership_date %>
+</p>
+
+<p>
+  <strong>No of yrs:</strong>
+  <%= @professional_membership.no_of_yrs %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @professional_membership.position %>
+</p>
+
+<%= link_to 'Edit', edit_professional_membership_path(@professional_membership) %> |
+<%= link_to 'Back', professional_memberships_path %>

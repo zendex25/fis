@@ -1,0 +1,45 @@
+<h1>Listing teaching_experiences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>Tot sems sbc</th>
+      <th>Tot sems other</th>
+      <th>Exp other</th>
+      <th>Position</th>
+      <th>Institution</th>
+      <th>Salary</th>
+      <th>Date employed from</th>
+      <th>Date employed to</th>
+      <th>Leave reason</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teaching_experiences.each do |teaching_experience| %>
+      <tr>
+        <td><%= teaching_experience.faculty %></td>
+        <td><%= teaching_experience.tot_sems_sbc %></td>
+        <td><%= teaching_experience.tot_sems_other %></td>
+        <td><%= teaching_experience.exp_other %></td>
+        <td><%= teaching_experience.position %></td>
+        <td><%= teaching_experience.institution %></td>
+        <td><%= teaching_experience.salary %></td>
+        <td><%= teaching_experience.date_employed_from %></td>
+        <td><%= teaching_experience.date_employed_to %></td>
+        <td><%= teaching_experience.leave_reason %></td>
+        <td><%= link_to 'Show', teaching_experience %></td>
+        <td><%= link_to 'Edit', edit_teaching_experience_path(teaching_experience) %></td>
+        <td><%= link_to 'Destroy', teaching_experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Teaching experience', new_teaching_experience_path %>

@@ -1,0 +1,39 @@
+<h1>Listing non_teaching_experiences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>Position</th>
+      <th>Institution</th>
+      <th>Salary</th>
+      <th>Date employed from</th>
+      <th>Date employed to</th>
+      <th>Leave reason</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @non_teaching_experiences.each do |non_teaching_experience| %>
+      <tr>
+        <td><%= non_teaching_experience.faculty %></td>
+        <td><%= non_teaching_experience.position %></td>
+        <td><%= non_teaching_experience.institution %></td>
+        <td><%= non_teaching_experience.salary %></td>
+        <td><%= non_teaching_experience.date_employed_from %></td>
+        <td><%= non_teaching_experience.date_employed_to %></td>
+        <td><%= non_teaching_experience.leave_reason %></td>
+        <td><%= link_to 'Show', non_teaching_experience %></td>
+        <td><%= link_to 'Edit', edit_non_teaching_experience_path(non_teaching_experience) %></td>
+        <td><%= link_to 'Destroy', non_teaching_experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Non teaching experience', new_non_teaching_experience_path %>

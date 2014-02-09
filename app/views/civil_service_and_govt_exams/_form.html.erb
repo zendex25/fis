@@ -1,0 +1,33 @@
+<%= form_for(@civil_service_and_govt_exam) do |f| %>
+  <% if @civil_service_and_govt_exam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@civil_service_and_govt_exam.errors.count, "error") %> prohibited this civil_service_and_govt_exam from being saved:</h2>
+
+      <ul>
+      <% @civil_service_and_govt_exam.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :faculty_id %><br>
+    <%= f.text_field :faculty_id %>
+  </div>
+  <div class="field">
+    <%= f.label :exam_type %><br>
+    <%= f.text_field :exam_type %>
+  </div>
+  <div class="field">
+    <%= f.label :date_taken %><br>
+    <%= f.datetime_select :date_taken %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.text_field :rating %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

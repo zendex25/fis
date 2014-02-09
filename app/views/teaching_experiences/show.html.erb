@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @teaching_experience.faculty %>
+</p>
+
+<p>
+  <strong>Tot sems sbc:</strong>
+  <%= @teaching_experience.tot_sems_sbc %>
+</p>
+
+<p>
+  <strong>Tot sems other:</strong>
+  <%= @teaching_experience.tot_sems_other %>
+</p>
+
+<p>
+  <strong>Exp other:</strong>
+  <%= @teaching_experience.exp_other %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @teaching_experience.position %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @teaching_experience.institution %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @teaching_experience.salary %>
+</p>
+
+<p>
+  <strong>Date employed from:</strong>
+  <%= @teaching_experience.date_employed_from %>
+</p>
+
+<p>
+  <strong>Date employed to:</strong>
+  <%= @teaching_experience.date_employed_to %>
+</p>
+
+<p>
+  <strong>Leave reason:</strong>
+  <%= @teaching_experience.leave_reason %>
+</p>
+
+<%= link_to 'Edit', edit_teaching_experience_path(@teaching_experience) %> |
+<%= link_to 'Back', teaching_experiences_path %>

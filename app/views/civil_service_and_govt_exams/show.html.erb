@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @civil_service_and_govt_exam.faculty %>
+</p>
+
+<p>
+  <strong>Exam type:</strong>
+  <%= @civil_service_and_govt_exam.exam_type %>
+</p>
+
+<p>
+  <strong>Date taken:</strong>
+  <%= @civil_service_and_govt_exam.date_taken %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @civil_service_and_govt_exam.rating %>
+</p>
+
+<%= link_to 'Edit', edit_civil_service_and_govt_exam_path(@civil_service_and_govt_exam) %> |
+<%= link_to 'Back', civil_service_and_govt_exams_path %>

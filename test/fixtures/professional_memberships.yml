@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  faculty_id: 
+  org_name: MyString
+  membership_date: 2014-02-10 02:37:28
+  no_of_yrs: 1
+  position: MyString
+
+two:
+  faculty_id: 
+  org_name: MyString
+  membership_date: 2014-02-10 02:37:28
+  no_of_yrs: 1
+  position: MyString

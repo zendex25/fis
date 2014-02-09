@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  faculty_id: 
+  institution: MyString
+  load_assign_subject: MyString
+  load_assign_unit: 1
+  load_assign_day: MyString
+  load_assign_time: 2014-02-10 02:40:33
+
+two:
+  faculty_id: 
+  institution: MyString
+  load_assign_subject: MyString
+  load_assign_unit: 1
+  load_assign_day: MyString
+  load_assign_time: 2014-02-10 02:40:33

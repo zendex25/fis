@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209173108) do
+ActiveRecord::Schema.define(version: 20140209184124) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(version: 20140209173108) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "char_refs", force: true do |t|
+    t.integer  "faculty_id"
+    t.string   "name"
+    t.string   "designation"
+    t.string   "address"
+    t.string   "tel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "char_refs", ["faculty_id"], name: "index_char_refs_on_faculty_id"
+
   create_table "children", force: true do |t|
     t.integer  "faculty_id"
     t.string   "name"
@@ -56,6 +68,17 @@ ActiveRecord::Schema.define(version: 20140209173108) do
   end
 
   add_index "children", ["faculty_id"], name: "index_children_on_faculty_id"
+
+  create_table "civil_service_and_govt_exams", force: true do |t|
+    t.integer  "faculty_id"
+    t.string   "exam_type"
+    t.datetime "date_taken"
+    t.string   "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "civil_service_and_govt_exams", ["faculty_id"], name: "index_civil_service_and_govt_exams_on_faculty_id"
 
   create_table "educational_attainments", force: true do |t|
     t.integer  "faculty_id"
@@ -146,5 +169,74 @@ ActiveRecord::Schema.define(version: 20140209173108) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "load_assign_in_others", force: true do |t|
+    t.integer  "faculty_id"
+    t.string   "institution"
+    t.string   "load_assign_subject"
+    t.integer  "load_assign_unit"
+    t.string   "load_assign_day"
+    t.datetime "load_assign_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "load_assign_in_others", ["faculty_id"], name: "index_load_assign_in_others_on_faculty_id"
+
+  create_table "non_teaching_experiences", force: true do |t|
+    t.integer  "faculty_id"
+    t.string   "position"
+    t.string   "institution"
+    t.integer  "salary"
+    t.datetime "date_employed_from"
+    t.datetime "date_employed_to"
+    t.string   "leave_reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "non_teaching_experiences", ["faculty_id"], name: "index_non_teaching_experiences_on_faculty_id"
+
+  create_table "professional_memberships", force: true do |t|
+    t.integer  "faculty_id"
+    t.string   "org_name"
+    t.datetime "membership_date"
+    t.integer  "no_of_yrs"
+    t.string   "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "professional_memberships", ["faculty_id"], name: "index_professional_memberships_on_faculty_id"
+
+  create_table "publications_and_researches", force: true do |t|
+    t.integer  "faculty_id"
+    t.string   "organ_name"
+    t.string   "material_type"
+    t.datetime "publication_date"
+    t.string   "authorship_type"
+    t.string   "co_author"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "publications_and_researches", ["faculty_id"], name: "index_publications_and_researches_on_faculty_id"
+
+  create_table "teaching_experiences", force: true do |t|
+    t.integer  "faculty_id"
+    t.integer  "tot_sems_sbc"
+    t.integer  "tot_sems_other"
+    t.string   "exp_other"
+    t.string   "position"
+    t.string   "institution"
+    t.integer  "salary"
+    t.datetime "date_employed_from"
+    t.datetime "date_employed_to"
+    t.string   "leave_reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "teaching_experiences", ["faculty_id"], name: "index_teaching_experiences_on_faculty_id"
 
 end

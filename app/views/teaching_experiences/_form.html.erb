@@ -1,0 +1,57 @@
+<%= form_for(@teaching_experience) do |f| %>
+  <% if @teaching_experience.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@teaching_experience.errors.count, "error") %> prohibited this teaching_experience from being saved:</h2>
+
+      <ul>
+      <% @teaching_experience.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :faculty_id %><br>
+    <%= f.text_field :faculty_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tot_sems_sbc %><br>
+    <%= f.number_field :tot_sems_sbc %>
+  </div>
+  <div class="field">
+    <%= f.label :tot_sems_other %><br>
+    <%= f.number_field :tot_sems_other %>
+  </div>
+  <div class="field">
+    <%= f.label :exp_other %><br>
+    <%= f.text_field :exp_other %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :institution %><br>
+    <%= f.text_field :institution %>
+  </div>
+  <div class="field">
+    <%= f.label :salary %><br>
+    <%= f.number_field :salary %>
+  </div>
+  <div class="field">
+    <%= f.label :date_employed_from %><br>
+    <%= f.datetime_select :date_employed_from %>
+  </div>
+  <div class="field">
+    <%= f.label :date_employed_to %><br>
+    <%= f.datetime_select :date_employed_to %>
+  </div>
+  <div class="field">
+    <%= f.label :leave_reason %><br>
+    <%= f.text_field :leave_reason %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

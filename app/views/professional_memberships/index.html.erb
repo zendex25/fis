@@ -1,0 +1,35 @@
+<h1>Listing professional_memberships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>Org name</th>
+      <th>Membership date</th>
+      <th>No of yrs</th>
+      <th>Position</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professional_memberships.each do |professional_membership| %>
+      <tr>
+        <td><%= professional_membership.faculty %></td>
+        <td><%= professional_membership.org_name %></td>
+        <td><%= professional_membership.membership_date %></td>
+        <td><%= professional_membership.no_of_yrs %></td>
+        <td><%= professional_membership.position %></td>
+        <td><%= link_to 'Show', professional_membership %></td>
+        <td><%= link_to 'Edit', edit_professional_membership_path(professional_membership) %></td>
+        <td><%= link_to 'Destroy', professional_membership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional membership', new_professional_membership_path %>
