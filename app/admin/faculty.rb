@@ -1,6 +1,8 @@
 ActiveAdmin.register Faculty do
 
-  index do
+  menu :parent => "FIS", :priority => 1, :label => "Personal Record"
+
+  index :title => 'Personal Records' do
     column :id
     column :last_name
     column :first_name

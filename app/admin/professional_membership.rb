@@ -1,5 +1,23 @@
 ActiveAdmin.register ProfessionalMembership do
+menu :parent => "FIS", :priority => 6, :label => "Professional Memberships"
 
+form do |f|
+  f.inputs "ProfessionalMembership" do
+
+
+
+    f.input :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.last_name, u.id]}, :include_blank => false
+      f.input :org_name
+      f.input :membership_date
+      f.input :no_of_yrs
+      f.input :position
+    
+
+  end
+
+f.actions
+
+end
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

@@ -1,11 +1,22 @@
 ActiveAdmin.setup do |config|
 
+      config.namespace :admin do |admin|
+
+      # This block will edit the default menu
+      admin.build_menu do |menu|
+        menu.add :label => "FIS", :priority => 1
+      end
+
+    end
+
+    config.allow_comments = false
+
   # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Fis"
+  config.site_title = "Faculty Information System"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.

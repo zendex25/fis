@@ -1,6 +1,27 @@
 ActiveAdmin.register NonTeachingExperience do
+menu :parent => "FIS", :priority => 5, :label => "Non-Teaching Experience"
 
-  
+form do |f|
+  f.inputs "NonTeachingExperience" do
+
+
+
+    f.input :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.last_name, u.id]}, :include_blank => false
+      f.input :position
+      f.input :institution
+      f.input :salary
+      f.input :date_employed_from
+      f.input :date_employed_to
+      f.input :leave_reason
+
+    
+
+  end
+
+f.actions
+
+end
+
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
