@@ -7,12 +7,12 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 #gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
 
 # Use sqlite3 as the database for Active Record
-#group :development, :test do
-#  gem 'sqlite3'
-#end
-#group :production do
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
   gem 'pg'
-#end
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
