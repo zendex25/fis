@@ -33,11 +33,12 @@ ActiveAdmin.register Faculty do
       f.input  :nationality
       f.input  :citizen
       f.input  :birth_place
-      f.input  :birth_date
+      f.input  :birth_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year - 17
+
       f.input  :civil_status
       f.input  :sex
       f.input  :spouse
-      f.input  :marriage_date
+      f.input  :marriage_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
       f.input  :occupation
       f.input  :position
       f.input  :employer
@@ -68,8 +69,8 @@ ActiveAdmin.register Faculty do
       f.input  :pro_license
       f.input  :resid_cert
       f.input  :issued_at
-      f.input  :issued_on
-      f.input  :pro_license_expire
+      f.input  :issued_on, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
+      f.input  :pro_license_expire, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
       f.input  :academic_rank
       f.input  :faculty_status
     end 

@@ -19,6 +19,10 @@ Fis::Application.routes.draw do
 
   resources :faculties
 
+  get "website/index"
+
+  root :to => 'website#index', :as => 'website'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

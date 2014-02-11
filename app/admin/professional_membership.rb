@@ -8,7 +8,7 @@ form do |f|
 
     f.input :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.last_name, u.id]}, :include_blank => false
       f.input :org_name
-      f.input :membership_date
+      f.input :membership_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
       f.input :no_of_yrs
       f.input :position
     

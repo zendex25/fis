@@ -10,8 +10,8 @@ form do |f|
       f.input :position
       f.input :institution
       f.input :salary
-      f.input :date_employed_from
-      f.input :date_employed_to
+      f.input :date_employed_from, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
+      f.input :date_employed_to, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
       f.input :leave_reason
 
     

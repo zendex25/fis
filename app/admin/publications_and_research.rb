@@ -9,7 +9,7 @@ form do |f|
     f.input :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.last_name, u.id]}, :include_blank => false
       f.input :organ_name
       f.input :material_type
-      f.input :publication_date
+      f.input :publication_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
       f.input :authorship_type
       f.input :co_author
     
