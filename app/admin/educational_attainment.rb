@@ -9,12 +9,13 @@ ActiveAdmin.register EducationalAttainment do
 
 
     f.input :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.last_name, u.id]}, :include_blank => false
-    f.input :school_name_elemetary
-    f.input :school_location_elementary
-      f.input :school_yearfrom_elementary, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :discard_month => true, :discard_day => true
-      f.input :school_yearto_elementary, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year + 12, :discard_month => true, :discard_day => true
-      f.input :school_degrees_elementary
-      f.input :school_honors_elementary
+
+    f.input :school_name_elemetary, :label => "Elementary: School/College"
+    f.input :school_location_elementary, :label => "Elementary: Location"
+      f.input :school_yearfrom_elementary, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :discard_month => true, :discard_day => true, :label => "Elementary: Years Attended (From)"
+      f.input :school_yearto_elementary, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year + 12, :discard_month => true, :discard_day => true, :label => "Elementary: Years Attended (To)"
+      f.input :school_degrees_elementary, :label => "Elementary: Degrees/Title or Diploma"
+      f.input :school_honors_elementary, :label => "Elementary: Honors Received"
       f.input :school_name_intermediate
       f.input :school_location_intermediate
       f.input :school_yearfrom_intermediate, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :discard_month => true, :discard_day => true

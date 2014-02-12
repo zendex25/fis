@@ -1,7 +1,22 @@
 ActiveAdmin.register CharRef do
 menu :parent => "FIS", :priority => 9, :label => "Character References"
 
-index :title => 'Character References' 
+index :title => 'Character References'  do
+    column :faculty do |faculty|
+  faculty.faculty.fullname
+end
+  column :name
+  column :designation
+  column "Official Address", :address
+  column "Tel. No.", :tel
+  default_actions
+end
+
+filter :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.fullname, u.id]}, :include_blank => false
+filter :name
+filter :designation
+filter :address, :label => "Official Address"
+filter :tel, :label => "Tel. No."
 
 form do |f|
   f.inputs "CharRef" do
@@ -11,8 +26,9 @@ form do |f|
     f.input :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.last_name, u.id]}, :include_blank => false
       f.input :name
       f.input :designation
-      f.input :address
-      f.input :tel
+      f.input :address, :label => "Official Address"
+      f.input :tel, :label => "Tel. No."
+
 
         end
 
@@ -32,5 +48,7 @@ end
   #  permitted << :other if resource.something?
   #  permitted
   # end
+
+  permit_params :faculty_id, :name, :designation, :address, :tel
   
 end

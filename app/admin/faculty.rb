@@ -6,8 +6,6 @@ ActiveAdmin.register Faculty do
     column :id
     column :last_name
     column :first_name
-    column :position
-    column :employer
     column :academic_rank
     column :faculty_status
     default_actions
@@ -15,37 +13,38 @@ ActiveAdmin.register Faculty do
 
   filter :last_name
   filter :first_name
-  filter :position
-  filter :employer
+  
+  
+  
   filter :academic_rank
   filter :faculty_status
 
   form do |f|
 
     f.inputs "Faculty" do
-      f.input :last_name
-      f.input  :first_name
-      f.input  :middle_name
-      f.input  :present_address
-      f.input  :present_address_tel
-      f.input  :perma_address
-      f.input  :perma_address_tel
+      f.input :last_name, :label => "Last Name"
+      f.input  :first_name, :label => "First Name"
+      f.input  :middle_name, :label => "Middle Name"
+      f.input  :present_address, :label => "Present Address"
+      f.input  :present_address_tel, :label => "Tel. No."
+      f.input  :perma_address, :label => "Permanent Address"
+      f.input  :perma_address_tel, :label => "Tel. No."
       f.input  :nationality
       f.input  :citizen
-      f.input  :birth_place
-      f.input  :birth_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year - 17
+      f.input  :birth_place, :label => "Place of Birth"
+      f.input  :birth_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year - 17, :label => "Date of Birth"
 
-      f.input  :civil_status, :as => :select,  :collection => [['Single','single'],['Married','married'],['Separated','separated'],['Widow/Widower','widow']]
-      f.input  :sex, :as => :select,  :collection => [['Male','male'],['Female','female']]
+      f.input  :civil_status, :as => :radio,  :collection => [['Single','Single'],['Married','Married'],['Separated','Separated'],['Widow/Widower','Widow/Widower']]
+      f.input  :sex, :as => :radio,  :collection => [['Male','Male'],['Female','Female']]
       f.input  :spouse
-      f.input  :marriage_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
+      f.input  :marriage_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Date of Marriage"
       f.input  :occupation
       f.input  :position
       f.input  :employer
-      f.input  :employer_tel
-      f.input  :no_of_child
-      f.input  :no_of_child_studying
-      f.input  :no_of_child_working
+      f.input  :employer_tel, :label => "Tel. No."
+      f.input  :no_of_child, :label => "No. of Children"
+      f.input  :no_of_child_studying, :label => "No. of Children Studying"
+      f.input  :no_of_child_working, :label => "No. of Children Working"
       
 
       f.has_many :children do |g|
@@ -58,21 +57,21 @@ ActiveAdmin.register Faculty do
 
 
 
-      f.input  :father_name
-      f.input  :father_age
-      f.input  :mother_name
-      f.input  :mother_age
-      f.input  :tin
-      f.input  :sss
-      f.input  :gsis
-      f.input  :philhealth
-      f.input  :pro_license
-      f.input  :resid_cert
+      f.input  :father_name, :label => "Father's Name"
+      f.input  :father_age, :label => "Age"
+      f.input  :mother_name, :label => "Mother's Name"
+      f.input  :mother_age, :label => "Age"
+      f.input  :tin, :label => "TIN No."
+      f.input  :sss, :label => "SSS No."
+      f.input  :gsis, :label => "GSIS No."
+      f.input  :philhealth, :label => "Philhealth No."
+      f.input  :pro_license, :label => "Professional License No."
+      f.input  :resid_cert, :label => "Residence Certificate No."
       f.input  :issued_at
       f.input  :issued_on, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
-      f.input  :pro_license_expire, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
-      f.input  :academic_rank
-      f.input  :faculty_status, :as => :select,  :collection => [['Full-time','FT'],['Part-time','PT'],['Special Lecturer','SL'],['Others','O']]
+      f.input  :pro_license_expire, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Prof. License No. Expiry Date"
+      f.input  :academic_rank, :label => "Academic Rank"
+      f.input  :faculty_status, :as => :radio,  :collection => [['Full-time','Full-time'],['Part-time','Part-time'],['Special Lecturer','Special Lecturer'],['Others','Others']], :label => "Faculty Status"
     end 
 
     f.actions
