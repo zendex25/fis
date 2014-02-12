@@ -35,8 +35,8 @@ ActiveAdmin.register Faculty do
       f.input  :birth_place
       f.input  :birth_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year - 17
 
-      f.input  :civil_status
-      f.input  :sex
+      f.input  :civil_status, :as => :select,  :collection => [['Single','single'],['Married','married'],['Separated','separated'],['Widow/Widower','widow']]
+      f.input  :sex, :as => :select,  :collection => [['Male','male'],['Female','female']]
       f.input  :spouse
       f.input  :marriage_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
       f.input  :occupation
@@ -72,7 +72,7 @@ ActiveAdmin.register Faculty do
       f.input  :issued_on, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
       f.input  :pro_license_expire, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
       f.input  :academic_rank
-      f.input  :faculty_status
+      f.input  :faculty_status, :as => :select,  :collection => [['Full-time','FT'],['Part-time','PT'],['Special Lecturer','SL'],['Others','O']]
     end 
 
     f.actions

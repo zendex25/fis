@@ -8,9 +8,9 @@ form do |f|
 
     f.input :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.last_name, u.id]}, :include_blank => false
       f.input :organ_name
-      f.input :material_type
+      f.input :material_type, :as => :select,  :collection => [['Publication','P'],['Research','R'],['Thesis','T'],['Dissertation','D']]
       f.input :publication_date, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
-      f.input :authorship_type
+      f.input :authorship_type, :as => :select,  :collection => [['Single Authorship','S'],['Co-Authorship','C'],['Adaptation','A']]
       f.input :co_author
     
 
