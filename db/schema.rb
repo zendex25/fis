@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209184124) do
+ActiveRecord::Schema.define(version: 20140213191320) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -168,6 +168,10 @@ ActiveRecord::Schema.define(version: 20140209184124) do
     t.string   "faculty_status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "faculty_status2"
+    t.string   "pagibig"
+    t.string   "tbi"
+    t.string   "department"
   end
 
   create_table "load_assign_in_others", force: true do |t|

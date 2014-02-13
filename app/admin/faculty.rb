@@ -8,6 +8,9 @@ ActiveAdmin.register Faculty do
     column :first_name
     column :academic_rank
     column :faculty_status
+    column :faculty_status2
+    column :tbi
+    column :department
     default_actions
   end
 
@@ -18,10 +21,13 @@ ActiveAdmin.register Faculty do
   
   filter :academic_rank
   filter :faculty_status
+  filter :faculty_status2
+  filter :tbi
+  filter :department
 
   form do |f|
 
-    f.inputs "Faculty" do
+    f.inputs "Personal Record" do
       f.input :last_name, :label => "Last Name"
       f.input  :first_name, :label => "First Name"
       f.input  :middle_name, :label => "Middle Name"
@@ -45,18 +51,14 @@ ActiveAdmin.register Faculty do
       f.input  :no_of_child, :label => "No. of Children"
       f.input  :no_of_child_studying, :label => "No. of Children Studying"
       f.input  :no_of_child_working, :label => "No. of Children Working"
+    
       
-
-      f.has_many :children do |g|
-        g.input :name
-        g.input :sex
-        g.input :age
-        g.input :_destroy, :as => :boolean
-        
-      end
+    
+      
+    
 
 
-
+    
       f.input  :father_name, :label => "Father's Name"
       f.input  :father_age, :label => "Age"
       f.input  :mother_name, :label => "Mother's Name"
@@ -65,6 +67,7 @@ ActiveAdmin.register Faculty do
       f.input  :sss, :label => "SSS No."
       f.input  :gsis, :label => "GSIS No."
       f.input  :philhealth, :label => "Philhealth No."
+      f.input  :pagibig, :label => "Pag-IBIG No."
       f.input  :pro_license, :label => "Professional License No."
       f.input  :resid_cert, :label => "Residence Certificate No."
       f.input  :issued_at
@@ -72,6 +75,21 @@ ActiveAdmin.register Faculty do
       f.input  :pro_license_expire, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Prof. License No. Expiry Date"
       f.input  :academic_rank, :label => "Academic Rank"
       f.input  :faculty_status, :as => :radio,  :collection => [['Full-time','Full-time'],['Part-time','Part-time'],['Special Lecturer','Special Lecturer'],['Others','Others']], :label => "Faculty Status"
+      f.input  :faculty_status2, :as => :radio,  :collection => [['1st Probationary','1st Probationary'],['2nd Probationary','2nd Probationary'],['3rd Probationary','3rd Probationary'],['4th Probationary','4th Probationary'],['Regular/Permanent','Regular/Permanent'],['Administrator','Administrator']], :label => "Faculty Status 2"
+      f.input  :tbi, :label => "TBI"
+      f.input  :department, :as => :select,
+        :collection => 
+          [['Accountancy','Accountancy'],
+          ['Business Management and Entrepreneur','Business Management and Entrepreneur'],
+          ['Information Technology','Information Technology'],
+          ['Marketing Management','Marketing Management'],
+          ['Economics','Economics'],
+          ['Financial Management','Financial Management'],
+          ['Psychology','Psychology'],
+          ['Legal Management','Legal Management'],
+          ['General Education','General Education'],
+          ['National Service Training Program','National Service Training Program'],
+          ['Human Kinetics Development','Human Kinetics Development']], :label => "CAS Department"
     end 
 
     f.actions
@@ -90,6 +108,6 @@ ActiveAdmin.register Faculty do
   #  permitted
   # end
 
-  permit_params :last_name,  :first_name,  :middle_name,  :present_address,  :present_address_tel,  :perma_address,  :perma_address_tel,  :nationality,  :citizen,  :birth_place,  :birth_date,  :civil_status,  :sex,  :spouse,  :marriage_date,  :occupation,  :position,  :employer,  :employer_tel,  :no_of_child,  :no_of_child_studying,  :no_of_child_working,  :father_name,  :father_age,  :mother_name,  :mother_age,  :tin,  :sss,  :gsis,  :philhealth,  :pro_license,  :resid_cert,  :issued_at,  :issued_on,  :pro_license_expire,  :academic_rank,  :faculty_status,
+  permit_params :last_name,  :first_name,  :middle_name,  :present_address,  :present_address_tel,  :perma_address,  :perma_address_tel,  :nationality,  :citizen,  :birth_place,  :birth_date,  :civil_status,  :sex,  :spouse,  :marriage_date,  :occupation,  :position,  :employer,  :employer_tel,  :no_of_child,  :no_of_child_studying,  :no_of_child_working,  :father_name,  :father_age,  :mother_name,  :mother_age,  :tin,  :sss,  :gsis,  :philhealth,  :pro_license,  :resid_cert,  :issued_at,  :issued_on,  :pro_license_expire,  :academic_rank,  :faculty_status, :faculty_status2, :pagibig, :tbi, :department,
     children_attributes: [:name, :sex, :age, :_destroy]  
 end

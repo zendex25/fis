@@ -3,7 +3,7 @@ class Faculty < ActiveRecord::Base
 
 	validates :last_name, :first_name, :presence => true
 
-	accepts_nested_attributes_for :children, :allow_destroy => true
+	accepts_nested_attributes_for :children, :reject_if => :all_blank, :allow_destroy => true
 
 	def fullname
 		"#{self.last_name}, #{self.first_name}"
