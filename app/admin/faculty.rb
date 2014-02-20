@@ -90,6 +90,8 @@ ActiveAdmin.register Faculty do
           ['General Education','General Education'],
           ['National Service Training Program','National Service Training Program'],
           ['Human Kinetics Development','Human Kinetics Development']], :label => "CAS Department"
+      f.input  :contractfrom, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Contract Start"
+      f.input  :contractto, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Contract End"
     end 
 
     f.actions
@@ -108,6 +110,23 @@ ActiveAdmin.register Faculty do
   #  permitted
   # end
 
-  permit_params :last_name,  :first_name,  :middle_name,  :present_address,  :present_address_tel,  :perma_address,  :perma_address_tel,  :nationality,  :citizen,  :birth_place,  :birth_date,  :civil_status,  :sex,  :spouse,  :marriage_date,  :occupation,  :position,  :employer,  :employer_tel,  :no_of_child,  :no_of_child_studying,  :no_of_child_working,  :father_name,  :father_age,  :mother_name,  :mother_age,  :tin,  :sss,  :gsis,  :philhealth,  :pro_license,  :resid_cert,  :issued_at,  :issued_on,  :pro_license_expire,  :academic_rank,  :faculty_status, :faculty_status2, :pagibig, :tbi, :department,
+  permit_params :last_name,  :first_name,  :middle_name,  :present_address,  :present_address_tel,  :perma_address,  :perma_address_tel,  :nationality,  :citizen,  :birth_place,  :birth_date,  :civil_status,  :sex,  :spouse,  :marriage_date,  :occupation,  :position,  :employer,  :employer_tel,  :no_of_child,  :no_of_child_studying,  :no_of_child_working,  :father_name,  :father_age,  :mother_name,  :mother_age,  :tin,  :sss,  :gsis,  :philhealth,  :pro_license,  :resid_cert,  :issued_at,  :issued_on,  :pro_license_expire,  :academic_rank,  :faculty_status, :faculty_status2, :pagibig, :tbi, :department, :contractto, :contractfrom,
     children_attributes: [:name, :sex, :age, :_destroy]  
+
+  controller do
+    def show
+        @faculty = Faculty.find(params[:id])
+        @versions = @faculty.versions
+        @faculty = @faculty.versions[params[:version].to_i].reify if params[:version]
+        show! #it seems to need this
+    end
+  end
+    sidebar :versionate, :partial => "layouts/version", :only => :show
+
+  member_action :history do
+    @faculty = Faculty.find(params[:id])
+    @versions = @faculty.versions
+    render "layouts/history"
+  end
+
 end

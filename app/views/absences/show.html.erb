@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @absence.faculty %>
+</p>
+
+<p>
+  <strong>Date of absence:</strong>
+  <%= @absence.date_of_absence %>
+</p>
+
+<%= link_to 'Edit', edit_absence_path(@absence) %> |
+<%= link_to 'Back', absences_path %>

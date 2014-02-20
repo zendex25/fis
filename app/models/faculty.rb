@@ -1,4 +1,6 @@
 class Faculty < ActiveRecord::Base
+	has_paper_trail :only => [:academic_rank,  :faculty_status, :faculty_status2, :pagibig, :tbi, :department]
+
 	has_many :children, :dependent => :destroy
 
 	validates :last_name, :first_name, :presence => true

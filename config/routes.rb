@@ -1,4 +1,6 @@
 Fis::Application.routes.draw do
+  resources :absences
+
   resources :char_refs
 
   resources :load_assign_in_others
@@ -18,6 +20,8 @@ Fis::Application.routes.draw do
   resources :children
 
   resources :faculties
+
+  resources :versions
 
   get "website/index"
 

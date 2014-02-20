@@ -24,6 +24,20 @@ ActiveAdmin.register_page "Dashboard" do
         strong { link_to "View all", admin_faculties_path }
     end
 
+
+    br
+
+    section "Recently updated content" do
+  table_for PaperTrail::Version.order('id desc').limit(20) do # Use PaperTrail::Version if this throws an error
+    column "Item Type" do |v| v.item_type end
+    column "Item ID" do |v| v.item_id end
+    column "Event" do |v| v.event end
+    column "Object" do |v| v.changeset end
+    column "Modified at" do |v| v.created_at.to_s :short end
+    
+  end
+end
+
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do

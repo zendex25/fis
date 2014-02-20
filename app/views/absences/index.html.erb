@@ -1,0 +1,29 @@
+<h1>Listing absences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faculty</th>
+      <th>Date of absence</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @absences.each do |absence| %>
+      <tr>
+        <td><%= absence.faculty %></td>
+        <td><%= absence.date_of_absence %></td>
+        <td><%= link_to 'Show', absence %></td>
+        <td><%= link_to 'Edit', edit_absence_path(absence) %></td>
+        <td><%= link_to 'Destroy', absence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Absence', new_absence_path %>
