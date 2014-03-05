@@ -48,6 +48,8 @@ end
 
 gem 'paper_trail'
 
+gem "pdfkit"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

@@ -1,5 +1,7 @@
 ActiveAdmin.register Faculty do
 
+
+
   menu :parent => "FIS", :priority => 1, :label => "Personal Record"
 
   index :title => 'Personal Records' do
@@ -68,11 +70,11 @@ ActiveAdmin.register Faculty do
       f.input  :gsis, :label => "GSIS No."
       f.input  :philhealth, :label => "Philhealth No."
       f.input  :pagibig, :label => "Pag-IBIG No."
-      f.input  :pro_license, :label => "Professional License No."
       f.input  :resid_cert, :label => "Residence Certificate No."
+      f.input  :pro_license, :label => "Professional License No."
+      f.input  :pro_license_expire, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Prof. License No. Expiry Date"
       f.input  :issued_at
       f.input  :issued_on, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
-      f.input  :pro_license_expire, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Prof. License No. Expiry Date"
       f.input  :academic_rank, :label => "Academic Rank"
       f.input  :faculty_status, :as => :radio,  :collection => [['Full-time','Full-time'],['Part-time','Part-time'],['Special Lecturer','Special Lecturer'],['Others','Others']], :label => "Faculty Status"
       f.input  :faculty_status2, :as => :radio,  :collection => [['1st Probationary','1st Probationary'],['2nd Probationary','2nd Probationary'],['3rd Probationary','3rd Probationary'],['4th Probationary','4th Probationary'],['Regular/Permanent','Regular/Permanent'],['Administrator','Administrator']], :label => "Faculty Status 2"
@@ -87,7 +89,8 @@ ActiveAdmin.register Faculty do
           ['Financial Management','Financial Management'],
           ['Psychology','Psychology'],
           ['Legal Management','Legal Management'],
-          ['General Education','General Education'],
+          ['G
+            eneral Education','General Education'],
           ['National Service Training Program','National Service Training Program'],
           ['Human Kinetics Development','Human Kinetics Development']], :label => "CAS Department"
       f.input  :contractfrom, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Contract Start"

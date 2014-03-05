@@ -5,10 +5,71 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Website Horizontal Scrolling with jQuery" />
+        <meta name="keywords" content="jquery, horizontal, scrolling, scroll, smooth"/>
+          <link rel="stylesheet" href="css\style.css" type="text/css" media="screen"/>
+        <link rel="shortcut icon" href="images\favicon.ico">
 </head>
 <body>
 
-<%= yield %>
+       <div class="header"><img src="images\logo.png" class="logo"><img src="images\banner.jpg">
+        </div>
+        <!-- navbar -->
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="/admin">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- navbar -->
+        <div class="middle">
+
+            <div class="container">
+                <main class="contentintro">
+                    <strong>Content:</strong> Sed placerat accumsan ligula. Aliquam felis magna, congue quis, tempus eu, aliquam vitae, ante. Cras neque justo, ultrices at, rhoncus a, facilisis eget, nisl. Quisque vitae pede. Nam et augue. Sed a elit. Ut vel massa. Suspendisse nibh pede, ultrices vitae, ultrices nec, mollis non, nibh. In sit amet pede quis leo vulputate hendrerit. Cras laoreet leo et justo auctor condimentum. Integer id enim. Suspendisse egestas, dui ac egestas mollis, libero orci hendrerit lacus, et malesuada lorem neque ac libero. Morbi tempor pulvinar pede. Donec vel elit.
+                </main>
+                <main class="contentdb">
+                  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </main>
+                <!-- .content -->
+            </div><!-- .container-->
+
+            <!-- .right-sidebar -->
+            <aside class="right-sidebar">
+                <div class="rightcontent1">
+                a, mi. Nam nisl tellus, placerat eget, posuere eget, egestas eget, dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In elementum urna a eros. Integer iaculis. Maecenas vel elit.<br><br><br><br>
+                </div>
+                <div class="rightcontent2">
+                <strong>Content:</strong> Sed placerat accumsan ligula. Aliquam felis magna, congue quis, tempus eu, aliquam vitae, ante. Cras neque justo, ultrices at, rhoncus a, facilisis eget, nisl. Quisque vitae pede. Nam et augue. Sed a elit. Ut vel massa. Suspendisse nibh pede, ultrices vitae, ultrices nec, mollis non, nibh. In sit amet pede quis leo vulputate hendrerit. Cras laoreet leo et justo auctor condimentum. Integer id enim. Suspendisse egestas, dui ac egestas mollis, libero orci hendrerit lacus, et malesuada lorem neque ac libero. Morbi tempor pulvinar pede. Donec vel elit.
+                </div>
+                 <div class="rightcontent3">
+                <strong>Content:</strong> Sed placerat accumsan ligula. Aliquam felis magna, congue quis, tempus eu, aliquam vitae, ante. Cras neque justo, ultrices at, rhoncus a, facilisis eget, nisl. Quisque vitae pede. Nam et augue. Sed a elit. Ut vel massa. Suspendisse nibh pede, ultrices vitae, ultrices nec, mollis non, nibh. In sit amet pede quis leo vulputate hendrerit. Cras laoreet leo et justo auctor condimentum. Integer id enim. Suspendisse egestas, dui ac egestas mollis, libero orci hendrerit lacus, et malesuada lorem neque ac libero. Morbi tempor pulvinar pede. Donec vel elit.
+                </div>
+            </aside><!-- .right-sidebar -->
+            
+        </div><!-- .middle-->
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer-body"
+                <ul>
+                    <li><a href="">Glossary</a></li>
+                    <li><a href="">Reference</a></li>
+                    <li><a href="">Contribute</a></li>
+                    <li><a href="">T.O.S</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+                <div class="copyright">
+                    ©SBC
+                </div>
+        </div>
+        <!-- footer -->
 
 </body>
 </html>
