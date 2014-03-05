@@ -1,8 +1,6 @@
 class WebsiteController < ApplicationController
-
   def index
-@faculties = Faculty.all
-@versions = Version.all
-end
-
+    @faculties = Faculty.all
+    @versions = PaperTrail::Version.all
+  end
 end
