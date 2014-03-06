@@ -1,75 +1,20 @@
 
 
+
+
+
+
+<div align="center" style="background-color: black; font-size: medium; padding-top: 12px; padding-bottom: 4px; background-color: #91bec1"><a href="/admin" vlink="white" link="white">Admin</a></div>
+
 <h1><%= yield(:title) %></h1>
 
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Faculty Information System - BETA</h1>
-<div class="story" style="margin:20px; width:100%">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-<br>
-<br>
+<div style="float:left; margin-left:20% ; margin-top: 12px; margin-right: 12px"><img src="/images/logo.png" width="240px"; height:="240px"></div>
 
+<div style="margin-top: 12px"><h1>Faculty Information System - BETA</h1></div>
 
-
-
-
-
-<table>
-  <thead>
-    <tr>
-      <th>Last name</th>
-      <th>First name</th>
-      <th>Faculty status 1</th>
-      <th>Faculty status 2</th>
-      <th>TBI</th>
-      <th>Department</th>
-          </tr>
-  </thead>
-
-   <tbody>
-    <% @faculties.each do |faculty| %>
-      <tr>
-        <td><%= faculty.last_name %></td>
-        <td><%= faculty.first_name %></td>
-        <td><%= faculty.faculty_status %></td>
-        <td><%= faculty.faculty_status2 %></td>
-        <td><%= faculty.tbi %></td>
-        <td><%= faculty.department %></td>
-        </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>Item Type</th>
-      <th>Item ID</th>
-      <th>Event</th>
-      
-      <th>Object</th>
-      <th>Created At</th>
-      
-          </tr>
-  </thead>
-
-   <tbody>
-    <% @versions.each do |version| %>
-      <tr>
-        <td><%= version.item_type %></td>
-        <td><%= version.item_id %></td>
-        <td><%= version.event %></td>
-      
-        <td><%= version.changeset  %></td>
-        <td><%= version.created_at.to_s :short %></td>
-        </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-
-</div>
+<div style="margin:20px; margin-right:20%">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
