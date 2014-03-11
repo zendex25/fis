@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140311112741) do
     t.datetime "date_of_absence"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "on_leave"
+    t.string   "on_leave"
   end
 
   add_index "absences", ["faculty_id"], name: "index_absences_on_faculty_id"
