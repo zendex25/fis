@@ -1,7 +1,7 @@
 ActiveAdmin.register Absence do
-
+menu :parent => "Absences", :priority => 2, :label => "Absences"
   
-index do
+index :title => 'Absences' do
   column :faculty do |faculty|
     faculty.faculty.fullname
   end
@@ -23,7 +23,7 @@ form do |f|
         ['Sick Leave','Sick Leave'],
         ['No Pay Leave','No Pay Leave'],
         ['Paternal or Maternal Leave','Paternal or Maternal Leave'],
-        ['Berievement Leave','Berievement Leave']], :include_blank => true, :label => 'On Leave'
+        ['Berievement Leave','Berievement Leave']], :include_blank => true, :label => "On Leave"
   end
 f.actions
 end
@@ -41,6 +41,6 @@ end
   #  permitted
   # end
 
-  permit_params :faculty_id,  :date_of_absence, :on_leave
+  permit_params :faculty_id, :date_of_absence, :on_leave
   
 end
