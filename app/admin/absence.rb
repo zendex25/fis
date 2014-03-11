@@ -11,7 +11,6 @@ index do
 end
 
 filter :faculty_id, :as => :select, :collection => Faculty.all.map {|u| [u.fullname, u.id]}, :include_blank => false
-filter :date_of_absence, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year
 filter :on_leave
 
 form do |f|
