@@ -1,190 +1,215 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @faculty.last_name %>
-</p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @faculty.first_name %>
-</p>
+<p id="notice"><%= notice %></td>
 
-<p>
-  <strong>Middle name:</strong>
-  <%= @faculty.middle_name %>
-</p>
+<div style="float:left; margin:20px; border: solid">
+  <table>
+<tr>
+  <td><strong>Last name:</strong>
+  <%= @faculty.last_name %></td>
 
-<p>
-  <strong>Present address:</strong>
-  <%= @faculty.present_address %>
-</p>
 
-<p>
-  <strong>Present address tel:</strong>
-  <%= @faculty.present_address_tel %>
-</p>
 
-<p>
-  <strong>Perma address:</strong>
-  <%= @faculty.perma_address %>
-</p>
+  <td><strong>First name:</strong>
+  <%= @faculty.first_name %></td>
 
-<p>
-  <strong>Perma address tel:</strong>
+
+
+  <td><strong>Middle name:</strong>
+  <%= @faculty.middle_name %></td>
+</tr>
+
+</table>
+<table>
+
+
+<tr>
+  <td><strong>Present address:</strong>
+  <%= @faculty.present_address %></td>
+
+</tr>
+
+<tr>
+
+  <td><strong>Present address tel.:</strong>
+  <%= @faculty.present_address_tel %></td>
+</tr>
+
+<tr>
+  <td><strong>Permanent address:</strong>
+  <%= @faculty.perma_address %></td>
+
+</tr>
+
+<tr>
+
+  <td><strong>Permanent address tel.:</strong>
   <%= @faculty.perma_address_tel %>
-</p>
+</td>
+</tr>
 
-<p>
+</table>
+<table>
+
+<tr>
+<td>
   <strong>Nationality:</strong>
   <%= @faculty.nationality %>
-</p>
+</td>
 
-<p>
-  <strong>Citizen:</strong>
+<td>
+  <strong>Citizenship:</strong>
   <%= @faculty.citizen %>
-</p>
+</td>
 
-<p>
+
+<td>
   <strong>Birth place:</strong>
   <%= @faculty.birth_place %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Birth date:</strong>
   <%= @faculty.birth_date %>
-</p>
+</td></tr>
 
-<p>
+<tr><td>
   <strong>Civil status:</strong>
   <%= @faculty.civil_status %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Sex:</strong>
   <%= @faculty.sex %>
-</p>
-
-<p>
+</td><td>
   <strong>Spouse:</strong>
   <%= @faculty.spouse %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Marriage date:</strong>
   <%= @faculty.marriage_date %>
-</p>
+</td></tr>
 
-<p>
+<tr><td>
   <strong>Occupation:</strong>
   <%= @faculty.occupation %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Position:</strong>
   <%= @faculty.position %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Employer:</strong>
   <%= @faculty.employer %>
-</p>
+</td>
 
-<p>
-  <strong>Employer tel:</strong>
+<td>
+  <strong>Employer tel.:</strong>
   <%= @faculty.employer_tel %>
-</p>
+</td></tr>
 
-<p>
-  <strong>No of child:</strong>
+<tr><td>
+  <strong>No. of children:</strong>
   <%= @faculty.no_of_child %>
-</p>
+</td>
 
-<p>
-  <strong>No of child studying:</strong>
+<td>
+  <strong>No. of children studying:</strong>
   <%= @faculty.no_of_child_studying %>
-</p>
+</td>
 
-<p>
-  <strong>No of child working:</strong>
+<td>
+  <strong>No. of children working:</strong>
   <%= @faculty.no_of_child_working %>
-</p>
+</td></tr>
 
-<p>
-  <strong>Father name:</strong>
+<tr><td>
+  <strong>Father's name:</strong>
   <%= @faculty.father_name %>
-</p>
+</td>
 
-<p>
-  <strong>Father age:</strong>
+<td>
+  <strong>Father's age:</strong>
   <%= @faculty.father_age %>
-</p>
+</td>
 
-<p>
-  <strong>Mother name:</strong>
+<td>
+  <strong>Mother's name:</strong>
   <%= @faculty.mother_name %>
-</p>
+</td>
 
-<p>
-  <strong>Mother age:</strong>
+<td>
+  <strong>Mother's age:</strong>
   <%= @faculty.mother_age %>
-</p>
+</td></tr>
 
-<p>
-  <strong>Tin:</strong>
+<tr><td>
+  <strong>TIN:</strong>
   <%= @faculty.tin %>
-</p>
+</td>
 
-<p>
-  <strong>Sss:</strong>
+<td>
+  <strong>SSS:</strong>
   <%= @faculty.sss %>
-</p>
+</td>
 
-<p>
-  <strong>Gsis:</strong>
+<td>
+  <strong>GSIS:</strong>
   <%= @faculty.gsis %>
-</p>
+</td></tr>
 
-<p>
+<tr><td>
   <strong>Philhealth:</strong>
   <%= @faculty.philhealth %>
-</p>
+</td>
 
-<p>
-  <strong>Pro license:</strong>
-  <%= @faculty.pro_license %>
-</p>
-
-<p>
-  <strong>Resid cert:</strong>
+<td>
+  <strong>Residence certificate:</strong>
   <%= @faculty.resid_cert %>
-</p>
+</td>
 
-<p>
+</tr>
+
+<tr><td>
+  <strong>Professional license:</strong>
+  <%= @faculty.pro_license %>
+</td>
+
+<td>
+  <strong>Professional license expire:</strong>
+  <%= @faculty.pro_license_expire %>
+</td>
+
+
+
+
+<td>
   <strong>Issued at:</strong>
   <%= @faculty.issued_at %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Issued on:</strong>
   <%= @faculty.issued_on %>
-</p>
+</td>
 
-<p>
-  <strong>Pro license expire:</strong>
-  <%= @faculty.pro_license_expire %>
-</p>
 
-<p>
+</tr>
+
+<tr><td>
   <strong>Academic rank:</strong>
   <%= @faculty.academic_rank %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Faculty status:</strong>
   <%= @faculty.faculty_status %>
-</p>
+</td></tr>
 
-<%= link_to 'Edit', edit_faculty_path(@faculty) %> |
-<%= link_to 'Back', faculties_path %>
-<p id="pdf_link"><%= link_to "Download Invoice (PDF)", faculty_path(@order, :format => "pdf") %></p>
+
+
+</table>
+</div>

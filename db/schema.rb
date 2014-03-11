@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140215130428) do
+ActiveRecord::Schema.define(version: 20140311112741) do
 
   create_table "absences", force: true do |t|
     t.integer  "faculty_id"
     t.datetime "date_of_absence"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "on_leave"
   end
 
   add_index "absences", ["faculty_id"], name: "index_absences_on_faculty_id"

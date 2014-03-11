@@ -25,6 +25,11 @@ Fis::Application.routes.draw do
 
   get "website/index"
 
+  controller :website do
+    get 'howto' => :howto
+  end
+  
+
   root :to => 'website#index', :as => 'website'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

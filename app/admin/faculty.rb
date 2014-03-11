@@ -6,12 +6,12 @@ ActiveAdmin.register Faculty do
 
   index :title => 'Personal Records' do
     column :id
-    column :last_name
-    column :first_name
+    column "Name", :last_name
+    column "", :first_name
     column :academic_rank
-    column :faculty_status
-    column :faculty_status2
-    column :tbi
+    column "Faculty Status", :faculty_status
+    column "", :faculty_status2
+    column "TBI", :tbi
     column :department
     default_actions
   end
@@ -26,6 +26,8 @@ ActiveAdmin.register Faculty do
   filter :faculty_status2
   filter :tbi
   filter :department
+
+  
 
   form do |f|
 
@@ -89,8 +91,7 @@ ActiveAdmin.register Faculty do
           ['Financial Management','Financial Management'],
           ['Psychology','Psychology'],
           ['Legal Management','Legal Management'],
-          ['G
-            eneral Education','General Education'],
+          ['General Education','General Education'],
           ['National Service Training Program','National Service Training Program'],
           ['Human Kinetics Development','Human Kinetics Development']], :label => "CAS Department"
       f.input  :contractfrom, :as => :date_select, start_year: Time.now.year - 100, end_year: Time.now.year, :label => "Contract Start"
@@ -99,6 +100,8 @@ ActiveAdmin.register Faculty do
 
     f.actions
   end
+
+
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
